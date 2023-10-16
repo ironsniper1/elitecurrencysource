@@ -668,6 +668,12 @@
                 <height>42</height>
                </size>
               </property>
+              <property name="toolTip">
+               <string>Elitecurrency Twitter (X) Feed</string>
+              </property>
+              <property name="autoFillBackground">
+               <bool>false</bool>
+              </property>
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://twitter.com/elitecurrency&quot;&gt;&lt;img src=&quot;:/icons/twitter&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
@@ -708,6 +714,9 @@
                 <width>42</width>
                 <height>42</height>
                </size>
+              </property>
+              <property name="toolTip">
+               <string>Elitecurrency Discord Room</string>
               </property>
               <property name="text">
                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://discordapp.com/invite/pjdWntg&quot;&gt;&lt;img src=&quot;:/icons/discord&quot;/&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
