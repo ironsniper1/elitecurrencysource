@@ -27,6 +27,8 @@
 #include "guiutil.h"
 #include "rpcconsole.h"
 #include "wallet.h"
+#include "stakereportdialoge.h"
+
 
 #ifdef Q_OS_MAC
 #include "macdockiconhandler.h"
@@ -301,6 +303,8 @@ void BitcoinGUI::createActions()
     lockWalletAction->setToolTip(tr("Lock wallet"));
     signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
+    stakeReportAction = new QAction(QIcon(":/icons/lock_closed"), tr("Show stake report"), this);
+    stakeReportAction->setToolTip(tr("Open the Stake Report Box"));
 
     exportAction = new QAction(QIcon(""), tr("&EXPORT..."), this);
     exportAction->setToolTip(tr("Export the data in the current tab to a file"));
@@ -319,6 +323,8 @@ void BitcoinGUI::createActions()
     connect(lockWalletAction, SIGNAL(triggered()), this, SLOT(lockWallet()));
     connect(signMessageAction, SIGNAL(triggered()), this, SLOT(gotoSignMessageTab()));
     connect(verifyMessageAction, SIGNAL(triggered()), this, SLOT(gotoVerifyMessageTab()));
+    connect(stakeReportAction, SIGNAL(triggered()), this, SLOT(stakeReportClicked()));
+
 }
 
 void BitcoinGUI::createMenuBar()
@@ -354,10 +360,16 @@ void BitcoinGUI::createMenuBar()
     help->addSeparator();
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
+
+    QMenu *information = appMenuBar->addMenu(tr("Information"));
+    information->addAction(stakeReportAction);
+    // QString ss("QMenuBar::item { background-color: #ceffee; color: black }");
+    // appMenuBar->setStyleSheet(ss);
 }
 
 void BitcoinGUI::createToolBars()
 {
+    //disabled :flapmin
 
     // logo toolbar: disabled
 
@@ -713,6 +725,13 @@ void BitcoinGUI::updateStakingIcon()
         else
             labelStakingIcon->setToolTip(tr("Not staking"));
     }
+}
+
+void BitcoinGUI::stakeReportClicked()
+{
+    static StakeReportDialog dlg;
+    dlg.setModel(walletModel);
+    dlg.show();
 }
 
 void BitcoinGUI::error(const QString &title, const QString &message, bool modal)
