@@ -1139,11 +1139,13 @@ void MapPort()
 // lab-node are maintained by nlabs support team
 static const char *strDNSSeed[][2] = {
     {"com-node", "elite01.elitecurrency.info"},
-    {"com-node", "elite01.elitecurrency.info"},
-    {"com-node", "elite01.elitecurrency.info"},
+    {"com-node", "elite02.elitecurrency.info"},
     {"lab-node", "ec1.nerdlabs.dev"},
     {"lab-node", "ec2.nerdlabs.dev"},
     {"lab-node", "ec3.nerdlabs.dev"},
+    {"lab-node", "ec4.nerdlabs.dev"},
+    {"lab-node", "ec5.nerdlabs.dev"},
+    {"lab-node", "ec6.nerdlabs.dev"},
 
 	
 };
