@@ -1810,7 +1810,7 @@ Value setstakesplitthreshold(const Array& params, bool fHelp)
 	uint64_t nStakeSplitThreshold = boost::lexical_cast<int>(params[0].get_str());
 	if (pwalletMain->IsLocked())
         throw JSONRPCError(RPC_WALLET_UNLOCK_NEEDED, "Error: Unlock wallet to use this feature");
-	if (nStakeSplitThreshold > 25000000)
+    if (nStakeSplitThreshold > 1337000)
 		return "out of range - setting split threshold failed";
 	
 	CWalletDB walletdb(pwalletMain->strWalletFile);
