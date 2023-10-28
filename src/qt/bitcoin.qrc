@@ -46,6 +46,7 @@
         <file alias="discord">res/icons/discord.png</file>
         <file alias="twitter">res/icons/twitter.png</file>
         <file alias="connect_5">res/icons/connect5_16.png</file>
+        <file>res/images/elite-logo.png</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="about">res/images/about.png</file>
