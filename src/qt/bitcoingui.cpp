@@ -265,7 +265,7 @@ void BitcoinGUI::createActions()
     multiSendAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
     tabGroup->addAction(multiSendAction); 
 
-    resourcesAction = new QAction(QIcon(":/icons/space"), tr("&LINKS"), this);
+    resourcesAction = new QAction(QIcon(""), tr("&LINKS"), this);
     resourcesAction ->setToolTip(tr("Information and links about Elite "));
     resourcesAction ->setCheckable(true);
     resourcesAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_8));
@@ -371,10 +371,8 @@ void BitcoinGUI::createMenuBar()
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
 
-    QMenu *information = appMenuBar->addMenu(tr("Information"));
+    QMenu *information = appMenuBar->addMenu(tr("Stake Report"));
     information->addAction(stakeReportAction);
-    // QString ss("QMenuBar::item { background-color: #ceffee; color: black }");
-    // appMenuBar->setStyleSheet(ss);
 }
 
 void BitcoinGUI::createToolBars()

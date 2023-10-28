@@ -44,9 +44,7 @@ public slots:
     void updateStakeReportNow();
     void updateDisplayUnit(int);
     void CopyAllToClipboard();
-    void on_info_fb_clicked();
-    void on_info_tw_clicked();
-    void on_info_ws_clicked();
+
 };
 
 #endif // STAKEREPORTDIALOG_H
