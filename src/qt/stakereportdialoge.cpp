@@ -138,22 +138,6 @@ QString Coin_0Pad(int nUnit, int64_t amount)
 
     return result.leftJustified(poin, '0');
 }
-void StakeReportDialog::on_info_tw_clicked()
-{
-    QString link="https://twitter.com/netcoin_net?lang=en";
-    QDesktopServices::openUrl(QUrl(link));
-}
-void StakeReportDialog::on_info_fb_clicked()
-{
-    QString link="https://www.facebook.com/NetcoinNET";
-    QDesktopServices::openUrl(QUrl(link));
-}
-
-void StakeReportDialog::on_info_ws_clicked()
-{
-    QString link="http://netcoin.io";
-    QDesktopServices::openUrl(QUrl(link));
-}
 void StakeReportDialog::updateStakeReportNow()
 {
     updateStakeReport(true);

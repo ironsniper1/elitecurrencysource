@@ -27,6 +27,7 @@
 #include "guiutil.h"
 #include "rpcconsole.h"
 #include "wallet.h"
+#include "resources.h"
 #include "stakereportdialoge.h"
 
 
@@ -127,6 +128,8 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
 
     signVerifyMessageDialog = new SignVerifyMessageDialog(this);
 
+    resourcesPage = new ReSources(this);
+
     centralWidget = new QStackedWidget(this);
     centralWidget->addWidget(overviewPage);
     centralWidget->addWidget(transactionsPage);
@@ -134,6 +137,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent):
     centralWidget->addWidget(receiveCoinsPage);
     centralWidget->addWidget(sendCoinsPage);
     centralWidget->addWidget(multiSendDialog);
+    centralWidget->addWidget(resourcesPage);
     setCentralWidget(centralWidget);
 
     // Create status bar
@@ -259,7 +263,13 @@ void BitcoinGUI::createActions()
     multiSendAction->setToolTip(tr("MultiSend Settings"));
     multiSendAction->setCheckable(true);
     multiSendAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
-    tabGroup->addAction(multiSendAction);
+    tabGroup->addAction(multiSendAction); 
+
+    resourcesAction = new QAction(QIcon(""), tr("&LINKS"), this);
+    resourcesAction ->setToolTip(tr("Information and links about Elite "));
+    resourcesAction ->setCheckable(true);
+    resourcesAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_8));
+    tabGroup->addAction(resourcesAction);
 
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(overviewAction, SIGNAL(triggered()), this, SLOT(gotoOverviewPage()));
@@ -273,6 +283,8 @@ void BitcoinGUI::createActions()
     connect(addressBookAction, SIGNAL(triggered()), this, SLOT(gotoAddressBookPage()));
     connect(multiSendAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(multiSendAction, SIGNAL(triggered()), this, SLOT(multiSendClicked()));
+    connect(resourcesAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
+    connect(resourcesAction, SIGNAL(triggered()), this, SLOT(gotoReSourcesPage()));
 
     quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
     quitAction->setToolTip(tr("Quit application"));
@@ -359,10 +371,8 @@ void BitcoinGUI::createMenuBar()
     help->addAction(aboutAction);
     help->addAction(aboutQtAction);
 
-    QMenu *information = appMenuBar->addMenu(tr("Information"));
+    QMenu *information = appMenuBar->addMenu(tr("Stake Report"));
     information->addAction(stakeReportAction);
-    // QString ss("QMenuBar::item { background-color: #ceffee; color: black }");
-    // appMenuBar->setStyleSheet(ss);
 }
 
 void BitcoinGUI::createToolBars()
@@ -395,6 +405,8 @@ void BitcoinGUI::createToolBars()
     toolbar2->addAction(addressBookAction);
     toolbar2->addAction(openRPCConsoleAction);
     toolbar2->addAction(exportAction);
+    toolbar2->addAction(resourcesAction);
+
 
 
 }
@@ -894,6 +906,14 @@ void BitcoinGUI::gotoVerifyMessageTab(QString addr)
 
     if(!addr.isEmpty())
         signVerifyMessageDialog->setAddress_VM(addr);
+}
+void BitcoinGUI::gotoReSourcesPage()
+{
+    resourcesAction->setChecked(true);
+    centralWidget->setCurrentWidget(resourcesPage);
+
+    exportAction->setEnabled(false);
+    disconnect(exportAction, SIGNAL(triggered()), 0, 0);
 }
 
 void BitcoinGUI::dragEnterEvent(QDragEnterEvent *event)

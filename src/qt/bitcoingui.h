@@ -15,6 +15,8 @@ class SignVerifyMessageDialog;
 class Notificator;
 class RPCConsole;
 class MultiSendDialog;
+class ReSources;
+
 
 QT_BEGIN_NAMESPACE
 class QLabel;
@@ -69,6 +71,8 @@ private:
     SendCoinsDialog *sendCoinsPage;
     SignVerifyMessageDialog *signVerifyMessageDialog;
     MultiSendDialog *multiSendDialog;
+    ReSources *resourcesPage;
+
 
     QLabel *mainIcon;
 	QLabel *labelEncryptionIcon;
@@ -100,6 +104,8 @@ private:
     QAction *openRPCConsoleAction;
     QAction * multiSendAction;
     QAction *stakeReportAction;
+    QAction *resourcesAction;
+
 
 
     QSystemTrayIcon *trayIcon;
@@ -156,6 +162,9 @@ private slots:
     void gotoReceiveCoinsPage();
     /** Switch to send coins page */
     void gotoSendCoinsPage();
+    /** Show report and links */
+    void gotoReSourcesPage();
+
 
     /** Show Sign/Verify Message dialog and switch to sign message tab */
     void gotoSignMessageTab(QString addr = "");

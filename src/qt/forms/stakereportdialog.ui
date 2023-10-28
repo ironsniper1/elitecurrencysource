@@ -6,19 +6,19 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>700</width>
+    <width>600</width>
     <height>600</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>700</width>
+    <width>600</width>
     <height>600</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>700</width>
+    <width>600</width>
     <height>600</height>
    </size>
   </property>
@@ -33,21 +33,24 @@
     <widget class="QFrame" name="frame">
      <property name="minimumSize">
       <size>
-       <width>460</width>
-       <height>560</height>
+       <width>550</width>
+       <height>550</height>
       </size>
      </property>
      <property name="maximumSize">
       <size>
-       <width>460</width>
-       <height>560</height>
+       <width>550</width>
+       <height>550</height>
       </size>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
       <item>
@@ -96,7 +99,7 @@
        </widget>
       </item>
       <item>
-       <layout class="QGridLayout" name="gridLayout" columnstretch="3,3,0">
+       <layout class="QGridLayout" name="gridLayout" columnstretch="3,0,0">
         <property name="verticalSpacing">
          <number>5</number>
         </property>
@@ -522,6 +525,12 @@
         <attribute name="horizontalHeaderStretchLastSection">
          <bool>true</bool>
         </attribute>
+        <attribute name="verticalHeaderVisible">
+         <bool>false</bool>
+        </attribute>
+        <attribute name="verticalHeaderHighlightSections">
+         <bool>true</bool>
+        </attribute>
         <row/>
         <row/>
         <row/>
@@ -812,129 +821,6 @@
          </widget>
         </item>
        </layout>
-      </item>
-     </layout>
-    </widget>
-   </item>
-   <item row="0" column="1">
-    <widget class="QFrame" name="frame_2">
-     <property name="minimumSize">
-      <size>
-       <width>167</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777129</width>
-       <height>16777160</height>
-      </size>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-     <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="0">
-       <widget class="QPushButton" name="info_fb">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>161</width>
-          <height>161</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>161</width>
-          <height>161</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>:/images/res/images/fbqr-code.png</normaloff>:/images/res/images/fbqr-code.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>161</width>
-          <height>161</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0">
-       <widget class="QPushButton" name="info_tw">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>161</width>
-          <height>161</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>161</width>
-          <height>161</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>:/images/res/images/twtqr-code_1.png</normaloff>:/images/res/images/twtqr-code_1.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>161</width>
-          <height>161</height>
-         </size>
-        </property>
-       </widget>
-      </item>
-      <item row="2" column="0">
-       <widget class="QPushButton" name="info_ws">
-        <property name="minimumSize">
-         <size>
-          <width>161</width>
-          <height>161</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>161</width>
-          <height>161</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset>
-          <normaloff>:/images/res/images/netqr.png</normaloff>:/images/res/images/netqr.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>161</width>
-          <height>161</height>
-         </size>
-        </property>
-       </widget>
       </item>
      </layout>
     </widget>

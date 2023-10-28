@@ -267,6 +267,7 @@ HEADERS += src/qt/bitcoingui.h \
     src/sph_types.h \
     src/clientversion.h \
     src/qt/locale/stakereport.dialocpp \
+    src/qt/resources.h \
     src/qt/stakereportdialoge.h
 
 SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
@@ -346,6 +347,7 @@ SOURCES += src/qt/bitcoin.cpp src/qt/bitcoingui.cpp \
     src/zerocoin/Params.cpp \
     src/zerocoin/SerialNumberSignatureOfKnowledge.cpp \
     src/zerocoin/SpendMetaData.cpp \
+    src/qt/resources.cpp \
     src/zerocoin/ZeroTest.cpp
 
 RESOURCES += \
@@ -365,6 +367,7 @@ FORMS += \
     src/qt/forms/askpassphrasedialog.ui \
     src/qt/forms/rpcconsole.ui \
     src/qt/forms/optionsdialog.ui \
+    src/qt/forms/resources.ui \
     src/qt/forms/stakereportdialog.ui
 
 contains(USE_QRCODE, 1) {
