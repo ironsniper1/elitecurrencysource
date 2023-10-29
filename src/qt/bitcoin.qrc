@@ -43,8 +43,6 @@
         <file alias="toolbar">res/icons/toolbar.png</file>
         <file alias="bitcoin">res/icons/bitcoin.png</file>
         <file alias="toolbar_testnet">res/icons/toolbar_testnet.png</file>
-        <file alias="discord">res/icons/discord.png</file>
-        <file alias="twitter">res/icons/twitter.png</file>
         <file alias="connect_5">res/icons/connect5_16.png</file>
         <file>res/images/elite-logo.png</file>
     </qresource>
@@ -56,7 +54,10 @@
         <file alias="wings-logo">res/images/wings-logo.png</file>
         <file alias="overview-background">res/images/overview-background.png</file>
         <file alias="balance">res/images/balance.png</file>
-        <file alias="rtx">res/images/rtx.png</file>
+        <file alias="cryptoid">res/images/cryptoid.png</file>
+        <file alias="discord">res/images/discord.png</file>
+        <file alias="twitterx">res/images/twitterx.png</file>
+        <file alias="elite-logo-wallet">res/images/elite-logo-wallet.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
