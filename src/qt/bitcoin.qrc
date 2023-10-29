@@ -58,6 +58,10 @@
         <file alias="discord">res/images/discord.png</file>
         <file alias="twitterx">res/images/twitterx.png</file>
         <file alias="elite-logo-wallet">res/images/elite-logo-wallet.png</file>
+        <file alias="github">res/images/github.png</file>
+        <file alias="meta">res/images/meta.png</file>
+        <file alias="bitcointalk">res/images/bitcointalk.png</file>
+        <file alias="snapshot">res/images/snapshot.png</file>
     </qresource>
     <qresource prefix="/movies">
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
