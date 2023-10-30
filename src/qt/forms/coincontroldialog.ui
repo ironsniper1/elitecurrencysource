@@ -365,10 +365,13 @@
       </size>
      </property>
      <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+      <enum>QFrame::NoFrame</enum>
      </property>
      <property name="frameShadow">
-      <enum>QFrame::Sunken</enum>
+      <enum>QFrame::Plain</enum>
+     </property>
+     <property name="lineWidth">
+      <number>0</number>
      </property>
      <widget class="QWidget" name="horizontalLayoutWidget">
       <property name="geometry">
@@ -379,7 +382,7 @@
         <height>41</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0,0">
+      <layout class="QHBoxLayout" name="horizontalLayoutPanel" stretch="0,0,0,0">
        <property name="spacing">
         <number>14</number>
        </property>
@@ -451,7 +454,7 @@
       <bool>false</bool>
      </property>
      <property name="columnCount">
-      <number>11</number>
+      <number>12</number>
      </property>
      <attribute name="headerShowSortIndicator" stdset="0">
       <bool>true</bool>
@@ -461,7 +464,7 @@
      </attribute>
      <column>
       <property name="text">
-       <string/>
+       <string>Inputs</string>
       </property>
      </column>
      <column>
@@ -481,7 +484,7 @@
       <property name="text">
        <string>Weight</string>
       </property>
-     </column>	 	 
+     </column>
      <column>
       <property name="text">
        <string>Label</string>

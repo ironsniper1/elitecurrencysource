@@ -67,7 +67,7 @@
         <file alias="update_spinner">res/movies/update_spinner.mng</file>
     </qresource>
     <qresource prefix="/text">
-        <file alias="stylesheet">res/text/1337.qss</file>
+        <file alias="stylesheet">res/text/1337-3.qss</file>
     </qresource>
     <qresource prefix="/translations">
         <file alias="ar">locale/bitcoin_ar.qm</file>
