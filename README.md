@@ -1,8 +1,8 @@
 Elite Current Version
 ===========================
-Version: 2.0.1.2
+Version: 3.0.0.0
 
-IF YOU'RE RUNNING A WALLET OF A LOWER VERSION YOU NEED TO UPDATE A.S.A.P.
+Version Satoshi:2.0.1.1 Has Been Depreciated (please update)
 
 
 Elite Development Tree

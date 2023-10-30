@@ -265,7 +265,7 @@ void BitcoinGUI::createActions()
     multiSendAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_7));
     tabGroup->addAction(multiSendAction); 
 
-    resourcesAction = new QAction(QIcon(""), tr("&LINKS"), this);
+    resourcesAction = new QAction(QIcon(""), tr("&RESOURCES"), this);
     resourcesAction ->setToolTip(tr("Information and links about Elite "));
     resourcesAction ->setCheckable(true);
     resourcesAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_8));
@@ -315,11 +315,11 @@ void BitcoinGUI::createActions()
     verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
     stakeReportAction = new QAction(QIcon(":/icons/lock_closed"), tr("Show stake report"), this);
     stakeReportAction->setToolTip(tr("Open the Stake Report Box"));
-
-    exportAction = new QAction(QIcon(""), tr("&EXPORT..."), this);
-    exportAction->setToolTip(tr("Export the data in the current tab to a file"));
     openRPCConsoleAction = new QAction(QIcon(""), tr("&DEBUG"), this);
     openRPCConsoleAction->setToolTip(tr("Open debugging and diagnostic console"));
+    exportAction = new QAction(QIcon(""), tr("&EXPORT..."), this);
+    exportAction->setToolTip(tr("Export the data in the current tab to a file"));
+
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -403,9 +403,9 @@ void BitcoinGUI::createToolBars()
     toolbar2->addAction(receiveCoinsAction);
     toolbar2->addAction(historyAction);
     toolbar2->addAction(addressBookAction);
+    toolbar2->addAction(resourcesAction);
     toolbar2->addAction(openRPCConsoleAction);
     toolbar2->addAction(exportAction);
-    toolbar2->addAction(resourcesAction);
 
 
 
@@ -601,7 +601,7 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
         {
             progressBarLabel->setText(tr("Synchronizing with network..."));
             progressBarLabel->setVisible(false);
-            progressBar->setFormat(tr("Synchronizing with the Elite network:   %n block(s) remaining", "", nRemainingBlocks));
+            progressBar->setFormat(tr("Synchronizing:   %n block(s) remaining", "", nRemainingBlocks));
             progressBar->setMaximum(nTotalBlocks);
             progressBar->setValue(count);
             progressBar->setVisible(true);
@@ -1082,7 +1082,7 @@ void BitcoinGUI::updateStyle()
     if (!fUse1337Theme)
         return;
 
-    QString qssPath = QString::fromStdString( GetDataDir().string() ) + "/1337.qss";
+    QString qssPath = QString::fromStdString( GetDataDir().string() ) + "/1337-3.qss";
 
     QFile f( qssPath );
 
