@@ -48,9 +48,9 @@ TransactionView::TransactionView(QWidget *parent) :
 
     dateWidget = new QComboBox(this);
 #ifdef Q_OS_MAC
-    dateWidget->setFixedWidth(121);
+    dateWidget->setFixedWidth(200);
 #else
-    dateWidget->setFixedWidth(120);
+    dateWidget->setFixedWidth(200);
 #endif
     dateWidget->addItem(tr("All"), All);
     dateWidget->addItem(tr("Today"), Today);
@@ -63,9 +63,9 @@ TransactionView::TransactionView(QWidget *parent) :
 
     typeWidget = new QComboBox(this);
 #ifdef Q_OS_MAC
-    typeWidget->setFixedWidth(121);
+    typeWidget->setFixedWidth(100);
 #else
-    typeWidget->setFixedWidth(120);
+    typeWidget->setFixedWidth(100);
 #endif
 
     typeWidget->addItem(tr("All"), TransactionFilterProxy::ALL_TYPES);
@@ -92,9 +92,9 @@ TransactionView::TransactionView(QWidget *parent) :
     amountWidget->setPlaceholderText(tr("Min amount"));
 #endif
 #ifdef Q_OS_MAC
-    amountWidget->setFixedWidth(97);
+    amountWidget->setFixedWidth(160);
 #else
-    amountWidget->setFixedWidth(100);
+    amountWidget->setFixedWidth(160);
 #endif
     amountWidget->setValidator(new QDoubleValidator(0, 1e20, 8, this));
     hlayout->addWidget(amountWidget);
