@@ -108,7 +108,7 @@
               </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>10</width>
+                <width>12</width>
                 <height>20</height>
                </size>
               </property>
@@ -124,7 +124,7 @@
               </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>10</width>
+                <width>12</width>
                 <height>20</height>
                </size>
               </property>
@@ -155,7 +155,7 @@
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>20</height>
+                     <height>35</height>
                     </size>
                    </property>
                    <property name="maximumSize">

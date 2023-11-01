@@ -21,7 +21,7 @@ double GetPoSKernelPS2(const CBlockIndex* pindex);
 
 
 #define DECORATION_SIZE 32
-#define NUM_ITEMS 6
+#define NUM_ITEMS 5
 
 class TxViewDelegate : public QAbstractItemDelegate
 {
